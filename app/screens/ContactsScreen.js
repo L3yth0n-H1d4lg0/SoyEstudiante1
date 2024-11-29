@@ -2,7 +2,7 @@ import { View, Text, StyleSheet, Button } from 'react-native'
 
 export const Contacts = ({ navigation }) => {
     return <View style={styles.container}>
-        <Text> ESTOY EN CONTACTS </Text>
+        <Text> Soy los cambios del Estudiante DOS 2</Text>
         <Button
             title='HOME'
             onPress={() => {
@@ -15,7 +15,7 @@ export const Contacts = ({ navigation }) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: 'yellow',
         justifyContent: 'center',
         alignItems: 'center'
     },
