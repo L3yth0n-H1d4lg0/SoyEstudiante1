@@ -1,52 +1,44 @@
-import { View, Text, StyleSheet, Button } from 'react-native'
+import { View, Text, StyleSheet, Button } from 'react-native';
 
 export const Home = ({ navigation }) => {
-    return <View style={styles.container}>
-        <Text>HOME</Text>
-
-        <View style={styles.botones}>
-
-            <View style={styles.boton1}>
-                <Button
-                    title='CONTACTS'
-                    onPress={() => {
-                        navigation.navigate('ContactsNav');
-                    }}
-                />
+    return (
+        <View style={styles.container}>
+            <Text>HOME</Text>
+            <View style={styles.containerButton}>
+                <View style={styles.buttonContainer}>
+                    <Button
+                        title="CONTACTOS"
+                        onPress={() => {
+                            navigation.navigate('ContactsNav');
+                        }}
+                    />
+                </View>
+                <View style={styles.buttonContainer}>
+                    <Button
+                        title="PRODUCTOS"
+                        onPress={() => {
+                            navigation.navigate('ProductsNav');
+                        }}
+                    />
+                </View>
             </View>
-
-
-
-            <Button
-                title='PRODUCTOS'
-                onPress={() => {
-                    navigation.navigate('ProductNav');
-                }}
-            />
-
         </View>
-
-    </View>
-
-}
+    );
+};
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#fff',
-        alignItems: 'center',
         justifyContent: 'center',
-    },
-    botones: {
-        flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'space-between',
-        padding: 10,
-
+        paddingHorizontal: 5,
     },
-    boton1: {
-
-        marginRight: 60,
-
+    containerButton: {
+        marginTop: 10,
+        flexDirection: 'row'
+    },
+    buttonContainer: {
+        marginHorizontal: 50
     },
 });
